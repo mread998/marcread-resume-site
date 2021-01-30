@@ -4,7 +4,7 @@ WORKDIR /usr/share/nginx/
 
 RUN apk add git && rm -Rf html && git clone https://github.com/mread998/marcread-resume-site.git && mv marcread-resume-site html && chown -R nginx:nginx html/
 
-WORKDIR /usr/share/nginx/htmlexi
+WORKDIR /usr/share/nginx/html
 
 
 
