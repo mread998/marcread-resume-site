@@ -1,0 +1,27 @@
+# yaml file to deploy to kuberneties
+# kubectl create -f marcread-k8.yml -f marcread-k8-np.yml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: marcread
+  name: marcread
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: marcread
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: marcread
+    spec:
+      containers:
+      - image: mread998/marcread:latest
+        name: marcread
+        resources: {}
+status: {}
